@@ -2,5 +2,7 @@ let text = document.getElementById('evaluatedText')
 let count = document.getElementById('wordCount')
 
 text.addEventListener("input", () => {
-	count.innerText = text.value.length
+	let word = text.value
+	let splitedWord = word.split(/\s+/);
+	count.innerText = splitedWord.length
 })
